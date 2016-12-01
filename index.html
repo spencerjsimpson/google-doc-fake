@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<title>Word Processor</title>
+		<link rel="stylesheet" href="styles.css">
+
+		<!--Including Google Fonts to choose from-->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i|Indie+Flower:300,300i,400,400i,700,700i|Baloo+Tamma:300,300i,400,400i,700,700i|Lora:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link type="text/css" href="styles.css" rel="stylesheet">
+
+		<!--Including material Icons-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<script src="scripts.js"></script>
+	</head>
+	<body onload="newDocument()">
+		<div class="header-wrapper">
+			<header>
+				<div class="header-title">WORD PROCESSOR ONLINE</div>
+			</header>
+		</div>
+
+		<div class="header-spacer"></div>
+
+		<div class="button-section-wrapper">
+			<div class="button-section">
+				<div class="button-wrapper">
+					<button id="text-color-button" onclick="toggleMenu('font_color')"><i class="material-icons">format_color_text</i></button>
+				</div>
+				<div class="button-wrapper">
+					<button id="background-color-button" onclick="toggleMenu('background_color')"><i class="material-icons">format_color_fill</i></button>
+				</div>
+				<div class="button-wrapper">
+					<button id="font-button" onclick="toggleMenu('font_family')"><i class="material-icons">font_download</i></button>
+				</div>
+				<div class="button-wrapper">
+					<button id="font-size-button" onclick="toggleMenu('font_size')"><i class="material-icons">format_size</i></button>
+				</div>
+				<div class="button-wrapper">
+					<button id="text-bold-button" onclick="styleSelection({'font-weight': 'bold'})"><i class="material-icons">format_bold</i></button>
+				</div>
+				<div class="button-wrapper">
+					<button id="text-italic-button" onclick="styleSelection({'font-style': 'italic'})"><i class="material-icons">format_italic</i></button>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu-wrapper" id="font-color-menu">
+			<div class="button-section">
+				<div class="button-wrapper">
+					<button id="red-text-button" onclick="styleSelection({color: '#e53935'})">red</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="blue-text-button" onclick="styleSelection({color: '#1e88e5'})">blue</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="green-text-button" onclick="styleSelection({color: '#43a047'})">green</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="orange-text-button" onclick="styleSelection({color: '#fb8c00'})">orange</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="purple-text-button" onclick="styleSelection({color: '#8e24aa'})">purple</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="black-text-button" onclick="styleSelection({color: '#000000'})">black</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu-wrapper" id="background-color-menu">
+			<div class="button-section">
+				<div class="button-wrapper">
+					<button id="red-background-button" onclick="styleSelection({'background-color': '#e53935'})">red</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="blue-background-button" onclick="styleSelection({'background-color': '#1e88e5'})">blue</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="green-background-button" onclick="styleSelection({'background-color': '#43a047'})">green</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="orange-background-button" onclick="styleSelection({'background-color': '#fb8c00'})">orange</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="purple-background-button" onclick="styleSelection({'background-color': '#8e24aa'})">purple</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="black-background-button" onclick="styleSelection({'background-color': '#000000'})">black</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu-wrapper" id="font-family-menu">
+			<div class="button-section">
+				<div class="button-wrapper">
+					<button id="font-family-roboto-button" onclick="styleSelection({'font-family': 'Roboto'})">Roboto</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="font-family-indie-flower-button" onclick="styleSelection({'font-family': 'Indie Flower'})">Indie Flower</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="font-family-baloo-tamma-button" onclick="styleSelection({'font-family': 'Baloo Tamma'})">Baloo Tamma</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="font-family-lora-button" onclick="styleSelection({'font-family': 'Lora'})">Lora</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu-wrapper" id="font-size-menu">
+			<div class="button-section">
+				<div class="button-wrapper">
+					<button id="font-size-12-button" onclick="styleSelection({'font-size': '12px'})">12px font</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="font-size-16-button" onclick="styleSelection({'font-size': '16px'})">16px font</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="font-size-20-button" onclick="styleSelection({'font-size': '20px'})">20px font</button>
+				</div>
+				<div class="button-wrapper">
+					<button id="font-size-24-button" onclick="styleSelection({'font-size': '24px'})">24px font</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
